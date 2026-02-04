@@ -1,0 +1,629 @@
+@font-face {
+  font-family: japan;
+  src: url(./Japan-Daisuki.otf);
+}
+@font-face {
+  font-family: thin;
+  src: url(./Archa-Manic-Demo-Thin.ttf);
+}
+@font-face {
+  font-family: cartoon;
+  src: url(./Sublem.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color: white;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  font-size: clamp(14px, 1vw, 18px);
+}
+
+body {
+  background-color: rgb(0, 0, 54);
+}
+
+section {
+  max-width: 2000px;
+}
+
+main {
+  width: 100%;
+  height: 85%;
+  background-image: url(https://i.pinimg.com/1200x/a9/32/9b/a9329b6beb4d240a05cef743877b59eb.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+main nav {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main nav span {
+  font-family: japan;
+  font-size: 1.7rem;
+}
+main nav .links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+main nav .links a {
+  text-decoration: none;
+  color: white;
+  display: none;
+  transition: all ease 0.4s;
+}
+main nav .links a:hover {
+  transform: scale(1.4);
+}
+main nav .right {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+main nav .right button {
+  border: none;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  letter-spacing: 2px;
+  font-family: thin;
+  padding: 8px 18px;
+  bottom: 0px;
+  font-weight: 700;
+  transition: all ease 0.4s;
+}
+main nav .right button:hover {
+  background: rgb(255, 4, 0);
+  transform: scale(1.2);
+}
+main nav .right i {
+  display: block;
+  font-size: 1.2rem;
+}
+main section {
+  color: white;
+  width: 100%;
+  padding: 3rem;
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+main section h1 {
+  font-family: japan;
+  font-size: 7rem;
+}
+main section p {
+  font-family: cartoon;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+main section button {
+  display: flex;
+  align-items: flex-end;
+  background-color: white;
+  color: black;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: thin;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  padding: 1rem 2rem;
+  border: 1px solid black;
+  letter-spacing: 2px;
+  font-weight: 900;
+  transition: all ease 0.5s;
+}
+main section button i {
+  margin-left: 0.5rem;
+  display: block;
+  font-size: 1.2rem;
+  color: #000;
+}
+main section button:hover {
+  transform: scale(1.2);
+}
+
+nav {
+  padding: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav span {
+  font-family: japan;
+  font-size: 1.7rem;
+}
+nav .links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+nav .links a {
+  text-decoration: none;
+  color: white;
+  display: none;
+  transition: all ease 0.4s;
+}
+nav .links a:hover {
+  transform: scale(1.4);
+}
+nav .right {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+nav .right button {
+  border: none;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  letter-spacing: 2px;
+  font-family: thin;
+  padding: 8px 18px;
+  bottom: 0px;
+  font-weight: 700;
+  transition: all ease 0.4s;
+}
+nav .right button:hover {
+  background: rgb(255, 4, 0);
+  transform: scale(1.2);
+}
+nav .right i {
+  display: block;
+  font-size: 1.2rem;
+}
+
+.choose {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  color: white;
+  font-family: cartoon;
+  padding: 3rem;
+}
+.choose h3 {
+  letter-spacing: 2px;
+  font-size: 2rem;
+  width: 100%;
+}
+.choose .rightside {
+  display: flex;
+  justify-content: end;
+  border-top: 3px solid rgb(255, 255, 255);
+  padding: 1rem;
+  width: 100%;
+  font-size: 1.5rem;
+}
+.choose .rightside span {
+  color: red;
+  padding: 1rem 0.3rem;
+}
+.choose .rightside .text {
+  color: white;
+  padding: 1rem 0.3rem;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  border-top: 3px solid rgba(0, 0, 242, 0.629);
+  padding: 2rem;
+}
+.cards p {
+  padding: 2rem;
+  width: 100%;
+  color: white;
+  font-family: japan;
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: 100;
+  letter-spacing: 2px;
+  line-height: 1.5;
+}
+.cards .cardss {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cards .cardss img {
+  width: 90%;
+  margin: 0 auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  -o-object-position: center;
+     object-position: center;
+  transition: all ease 0.4s;
+}
+.cards .cardss #no {
+  width: 30%;
+  font-size: 1rem;
+  padding: 1rem;
+}
+.cards .cardss #no span {
+  color: rgb(119, 0, 0);
+}
+.cards .cardss .bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.cards .cardss .bottom p {
+  width: 80%;
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.cards .cardss .bottom h6 {
+  color: white;
+  font-size: 1.5rem;
+  font-family: cartoon;
+  letter-spacing: 2px;
+}
+.cards .cardss .bottom button {
+  border: none;
+  background: rgb(255, 4, 0);
+  color: white;
+  letter-spacing: 2px;
+  font-family: thin;
+  padding: 0.5rem 1rem;
+  bottom: 0px;
+  font-weight: 700;
+  transition: all ease 0.4s;
+  margin-bottom: 1rem;
+}
+.cards .cardss #card1,
+.cards .cardss #card2,
+.cards .cardss #card3 {
+  background: rgb(10, 22, 58);
+  transition: all ease 0.4s;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  transform-origin: center;
+}
+.cards .cardss #card1 {
+  border-bottom: 5px solid orangered;
+}
+.cards .cardss #card2 {
+  border-bottom: 5px solid rgb(111, 219, 255);
+}
+.cards .cardss #card3 {
+  border-bottom: 5px solid rgb(255, 223, 97);
+}
+.cards .cardss #card1:hover,
+.cards .cardss #card2:hover,
+.cards .cardss #card3:hover {
+  flex-grow: 1.5;
+  transform: scale(1.1);
+}
+.cards .cardss #card1:hover button,
+.cards .cardss #card2:hover button,
+.cards .cardss #card3:hover button {
+  border-radius: 50px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  background-color: rgb(0, 0, 77);
+  padding: 3rem;
+  color: white;
+}
+footer .topfooter {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  border-bottom: 2px solid blue;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+footer .topfooter h3 {
+  font-family: cartoon;
+  letter-spacing: 2px;
+  font-size: 3rem;
+  width: 100%;
+}
+footer .topfooter .rightside {
+  display: flex;
+  justify-content: end;
+  border-top: 3px solid rgb(255, 255, 255);
+  padding: 1rem;
+  width: 100%;
+  font-size: 1.5rem;
+  font-family: cartoon;
+}
+footer .topfooter .rightside span {
+  color: red;
+}
+footer .topfooter .rightside .text {
+  color: white;
+}
+footer p {
+  padding: 1rem;
+  width: 100%;
+  font-size: 1.2rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+@media (min-width: 800px) {
+  main nav {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  main nav .links {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+  }
+  main nav .links a {
+    display: block;
+    font-family: japan;
+    font-size: 1.2rem;
+  }
+  main nav .right i {
+    display: none;
+  }
+  main section {
+    display: flex;
+    width: 50%;
+  }
+  main section h1 {
+    font-family: japan;
+    font-size: 7rem;
+  }
+  main section p {
+    font-family: cartoon;
+    font-size: 1.4rem;
+    justify-content: center;
+    align-items: center;
+  }
+  main section button {
+    background-color: white;
+    color: black;
+    font-family: thin;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+    padding: 1rem 2rem;
+    border: 1px solid black;
+    letter-spacing: 2px;
+    font-weight: 900;
+    transition: all ease 0.5s;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+  }
+  nav .links {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+  }
+  nav .links a {
+    display: block;
+    font-family: japan;
+    font-size: 1.2rem;
+  }
+  nav .right i {
+    display: none;
+  }
+  .choose {
+    flex-direction: row;
+    justify-content: space-between;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+    color: white;
+    font-family: cartoon;
+    padding: 3rem;
+    width: 100%;
+  }
+  .choose h3 {
+    letter-spacing: 2px;
+    font-size: 2rem;
+    width: 30%;
+  }
+  .choose .rightside {
+    display: flex;
+    justify-content: end;
+    border-top: 3px solid rgb(255, 255, 255);
+    padding: 1rem;
+    width: 30%;
+    font-size: 1.5rem;
+  }
+  .choose .rightside span {
+    color: red;
+    padding: 1rem 0.3rem;
+  }
+  .choose .rightside .text {
+    color: white;
+    padding: 1rem 0.3rem;
+  }
+  .cards p {
+    width: 50%;
+    color: white;
+    font-family: japan;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 100;
+    letter-spacing: 2px;
+    line-height: 1.5;
+  }
+  .cards .cardss {
+    flex-direction: row;
+    padding: 2rem 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .cards .cardss img {
+    width: 90%;
+    margin: 0 auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+    display: block;
+    -o-object-position: center;
+       object-position: center;
+    transition: all ease 0.4s;
+  }
+  .cards .cardss #no {
+    width: 30%;
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  .cards .cardss #no span {
+    color: rgb(119, 0, 0);
+  }
+  .cards .cardss .bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .cards .cardss .bottom p {
+    width: 80%;
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .cards .cardss .bottom h6 {
+    color: white;
+    font-size: 1.5rem;
+    font-family: cartoon;
+    letter-spacing: 2px;
+  }
+  .cards .cardss .bottom button {
+    border: none;
+    background: rgb(255, 4, 0);
+    color: white;
+    letter-spacing: 2px;
+    font-family: thin;
+    padding: 0.5rem 1rem;
+    bottom: 0px;
+    font-weight: 700;
+    transition: all ease 0.4s;
+    margin-bottom: 1rem;
+  }
+  .cards .cardss #card1,
+  .cards .cardss #card2,
+  .cards .cardss #card3 {
+    background: rgb(10, 22, 58);
+    transition: all ease 0.4s;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    transform-origin: center;
+  }
+  .cards .cardss #card1 {
+    border-bottom: 5px solid orangered;
+  }
+  .cards .cardss #card2 {
+    border-bottom: 5px solid rgb(111, 219, 255);
+  }
+  .cards .cardss #card3 {
+    border-bottom: 5px solid rgb(255, 223, 97);
+  }
+  .cards .cardss #card1:hover,
+  .cards .cardss #card2:hover,
+  .cards .cardss #card3:hover {
+    flex-grow: 1.5;
+    transform: scale(1.1);
+  }
+  .cards .cardss #card1:hover button,
+  .cards .cardss #card2:hover button,
+  .cards .cardss #card3:hover button {
+    border-radius: 50px;
+  }
+  footer {
+    width: 100%;
+  }
+  footer .topfooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    padding: 2rem;
+    border-bottom: 2px solid blue;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+    font-size: 20px;
+  }
+  footer .topfooter h3 {
+    letter-spacing: 2px;
+    font-size: 2rem;
+    width: 100%;
+  }
+  footer .topfooter .rightside {
+    display: flex;
+    justify-content: end;
+    border-top: 3px solid rgb(255, 255, 255);
+    padding: 1rem;
+    width: 30%;
+    font-size: 1.5rem;
+  }
+  footer .topfooter .rightside span {
+    color: red;
+  }
+  footer p {
+    padding: 1rem;
+    width: 100%;
+    font-size: 1.2rem;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  }
+}/*# sourceMappingURL=style.css.map */

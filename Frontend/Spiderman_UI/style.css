@@ -1,0 +1,339 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color: white;
+  font-family: cursive;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(6, 6, 6);
+}
+
+main {
+  margin: 20px;
+  margin-bottom: 0;
+  margin-top: 20px;
+  width: 90%;
+  height: 90%;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 0.9fr 1fr 1fr 1fr 2fr;
+  grid-template-areas: "top top top top" "top top top top" "top-left-circle low low top-right-circle" "brightness network network earbuds" "brightness network network earbuds" "bot-left-circle DND DND bot-right-circle" "screen screen orientation orientation" "screen screen orientation orientation";
+}
+main #top {
+  grid-area: top;
+  background-color: #171515;
+  border-radius: 50px;
+  position: relative;
+}
+main #top i.buds {
+  font-size: 22px;
+  color: red;
+  position: absolute;
+  top: 17%;
+  left: 89%;
+  border-radius: 50%;
+  background-color: #3b3838;
+  padding: 5px;
+}
+main #top p {
+  position: absolute;
+  font-size: 16px;
+  left: 48%;
+  top: 20%;
+}
+main #top img {
+  position: absolute;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center calc(100% + 80px);
+     object-position: center calc(100% + 80px);
+  width: 40%;
+  height: 70%;
+  top: 17%;
+  left: 4%;
+}
+main #top i.pause {
+  font-size: 30px;
+  color: red;
+  position: absolute;
+  top: 57%;
+  left: 70%;
+}
+main #top i.rewind {
+  font-size: 30px;
+  color: red;
+  position: absolute;
+  top: 57%;
+  left: 55%;
+}
+main #top i.forward {
+  font-size: 30px;
+  color: red;
+  position: absolute;
+  top: 57%;
+  left: 85%;
+}
+main #top-left-circle {
+  grid-area: top-left-circle;
+  background-color: rgba(177, 5, 5, 0.995);
+  border-radius: 50%;
+  position: relative;
+}
+main #top-left-circle i {
+  font-size: 50px;
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main #low {
+  grid-area: low;
+  background-color: #171515;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+main #low p {
+  font-size: 18px;
+}
+main #low i {
+  font-size: 50px;
+  color: red;
+}
+main #top-right-circle {
+  grid-area: top-right-circle;
+  background-color: red;
+  border-radius: 50%;
+  position: relative;
+}
+main #top-right-circle i {
+  font-size: 50px;
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main #brightness {
+  grid-area: brightness;
+  background-color: #03050e;
+  border-radius: 50px;
+  background-image: url(https://i.pinimg.com/736x/1b/2a/e3/1b2ae378b6699a62690e74fa9afed17c.jpg);
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  position: relative;
+}
+main #brightness i {
+  position: absolute;
+  top: 3%;
+  left: 35%;
+  font-size: 30px;
+  color: red;
+}
+main #network {
+  grid-area: network;
+  background-color: #171515;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+main #network i.plane {
+  font-size: 45px;
+  color: red;
+  background-color: #3b3838;
+  border-radius: 50%;
+  padding: 7px;
+  transform: rotate(90deg);
+  display: inline-block;
+}
+main #network i.wifi {
+  font-size: 45px;
+  color: black;
+  background-color: red;
+  border-radius: 50%;
+  padding: 7px;
+}
+main #network i.ht {
+  font-size: 45px;
+  color: red;
+  background-color: #3b3838;
+  border-radius: 50%;
+  padding: 7px;
+}
+main #network div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  max-width: 70px;
+}
+main #network div i.flash {
+  font-size: 20px;
+  color: black;
+  background-color: #3b3838;
+  border-radius: 50%;
+  padding: 5px;
+}
+main #network div i.map {
+  font-size: 20px;
+  color: black;
+  background-color: #3b3838;
+  border-radius: 50%;
+  padding: 5px;
+}
+main #network div i.bt {
+  font-size: 20px;
+  color: black;
+  background-color: #3b3838;
+  border-radius: 50%;
+  padding: 5px;
+}
+main #network div i.rss {
+  font-size: 20px;
+  color: black;
+  background-color: #3b3838;
+  border-radius: 50%;
+  padding: 5px;
+}
+main #earbuds {
+  grid-area: earbuds;
+  background-color: #171515;
+  border-radius: 50px;
+}
+main #earbuds div {
+  background-image: url(https://i.pinimg.com/736x/15/61/12/15611246ee118750802ea09acd20c48f.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80%;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  opacity: 0.8;
+}
+main #earbuds h1 {
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  height: 20%;
+}
+main #bot-left-circle {
+  grid-area: bot-left-circle;
+  background-color: burlywood;
+  border-radius: 50%;
+  background-color: red;
+  border-radius: 50%;
+  position: relative;
+}
+main #bot-left-circle i {
+  font-size: 50px;
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main #DND {
+  grid-area: DND;
+  background-color: #171515;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+main #DND i {
+  margin-left: 20px;
+  background-color: red;
+  color: #222;
+  font-size: 30px;
+  padding: 10px;
+  border-radius: 50%;
+}
+main #DND p {
+  font-size: 18px;
+}
+main #bot-right-circle {
+  grid-area: bot-right-circle;
+  background-color: red;
+  border-radius: 50%;
+  position: relative;
+}
+main #bot-right-circle i {
+  font-size: 50px;
+  color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main #screen {
+  grid-area: screen;
+  background-image: url(https://i.pinimg.com/1200x/6d/51/2e/6d512e3b344d8b80925fded6bf2eff73.jpg);
+  background-size: cover;
+  background-position: center calc(100% + 15px);
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  gap: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+main #screen i {
+  padding: 10px;
+  font-size: 30px;
+}
+main #screen p {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+main #orientation {
+  grid-area: orientation;
+  background-image: url(https://i.pinimg.com/1200x/65/94/89/65948981cd05e86e09b4a24693cc2f35.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  gap: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+main #orientation i {
+  padding: 10px;
+  font-size: 30px;
+}
+main #orientation p {
+  padding: 10px 50px;
+  font-size: 18px;
+}
+
+@media (min-width: 800px) {
+  main {
+    width: 412px;
+    height: 915px;
+  }
+}/*# sourceMappingURL=style.css.map */

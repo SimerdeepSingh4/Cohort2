@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1 class="title">Weather</h1>
+      <p class="subtitle">Search any city to get current weather</p>
+    </header>
+
+    <section class="search">
+      <input id="cityInput" type="search" placeholder="Enter city name" aria-label="City name" />
+      <button id="searchBtn">Search</button>
+    </section>
+
+    <section id="weatherCard" class="card hidden" aria-live="polite">
+      <div class="card-header">
+        <div>
+          <h2 id="cityName">—</h2>
+          <p id="desc" class="muted">—</p>
+        </div>
+        <img id="icon" alt="weather icon" />
+      </div>
+
+      <div class="card-body">
+        <div class="temp">
+          <span id="temp">--</span>
+          <small>°C</small>
+        </div>
+        <div class="details">
+          <div>Feels: <span id="feels"></span>°C</div>
+          <div>Min/Max: <span id="minmax"></span>°C</div>
+          <div>Humidity: <span id="humidity"></span>%</div>
+          <div>Pressure: <span id="pressure"></span> hPa</div>
+          <div>Visibility: <span id="visibility"></span> m</div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">Data from OpenWeatherMap</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

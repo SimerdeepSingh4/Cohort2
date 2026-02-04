@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color: white;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #e6e3e1;
+  color: black;
+}
+
+.heading {
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem;
+}
+.heading h2 {
+  font-size: 4rem;
+  color: black;
+  width: 60%;
+}
+.heading p {
+  font-size: 1.4rem;
+  color: black;
+  width: 40%;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  grid-gap: 10px;
+  padding: 1rem;
+  grid-template-areas: "speaker cup cup" "speaker headphone purse" "shoes shoes school-bag";
+}
+main .speaker {
+  background-color: #fff;
+  grid-area: speaker;
+  border-radius: 20px;
+  padding: 2rem;
+}
+main .speaker img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .speaker h4 {
+  padding-top: 1rem;
+  color: black;
+  font-size: 3rem;
+}
+main .speaker p {
+  padding-top: 1rem;
+  color: black;
+  font-size: 1.5rem;
+}
+main .cup {
+  background-color: #fff;
+  grid-area: cup;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+main .cup img {
+  width: 30%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transform: rotate(30deg);
+}
+main .cup .para {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+main .cup .para h4 {
+  padding-top: 4rem;
+  color: black;
+  font-size: 3rem;
+}
+main .cup .para p {
+  padding-top: 1rem;
+  color: black;
+  font-size: 1.3rem;
+}
+main .headphone {
+  background-color: #fff;
+  grid-area: headphone;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1rem;
+}
+main .headphone img {
+  width: 60%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .headphone .para {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+main .headphone .para h4 {
+  padding-top: 3rem;
+  color: black;
+  font-size: 2.2rem;
+}
+main .headphone .para p {
+  padding-top: 1rem;
+  color: black;
+  font-size: 1.2rem;
+}
+main .purse {
+  background-color: #fff;
+  grid-area: purse;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+}
+main .purse img {
+  width: 50%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .purse .para {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+main .purse .para h4 {
+  padding-top: 4rem;
+  color: black;
+  font-size: 2.2rem;
+}
+main .purse .para p {
+  padding-top: 1rem;
+  color: black;
+  font-size: 1.2rem;
+}
+main .shoes {
+  background-color: #fff;
+  grid-area: shoes;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+}
+main .shoes img {
+  width: 50%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .shoes .para {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+main .shoes .para h4 {
+  padding-top: 4rem;
+  color: black;
+  font-size: 3rem;
+}
+main .shoes .para p {
+  padding-top: 1rem;
+  color: black;
+  font-size: 1.3rem;
+}
+main .school-bag {
+  background-color: #fff;
+  grid-area: school-bag;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+}
+main .school-bag img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .school-bag .para {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+main .school-bag .para h4 {
+  padding-top: 4rem;
+  color: black;
+  font-size: 2.5rem;
+}
+main .school-bag .para p {
+  padding-top: 1rem;
+  color: black;
+  font-size: 1.2rem;
+}/*# sourceMappingURL=style.css.map */

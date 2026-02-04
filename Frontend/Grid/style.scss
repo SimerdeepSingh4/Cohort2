@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: white;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #e6e3e1;
+    color: black;
+}
+
+
+.heading {
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem;
+
+    h2 {
+        font-size: 4rem;
+        color: black;
+        width: 60%;
+    }
+
+    p {
+        font-size: 1.4rem;
+        color: black;
+        width: 40%;
+    }
+
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    grid-gap: 10px;
+    padding: 1rem;
+    grid-template-areas: "speaker cup cup"
+        "speaker headphone purse"
+        "shoes shoes school-bag";
+
+
+    .speaker {
+        background-color: #fff;
+        grid-area: speaker;
+        border-radius: 20px;
+        padding: 2rem;
+
+        img {
+            width:100%;
+            object-fit: cover;
+        }
+
+        h4 {
+            padding-top: 1rem;
+            color: black;
+            font-size: 3rem;
+        }
+
+        p {
+            padding-top: 1rem;
+            color: black;
+            font-size: 1.5rem;
+        }
+
+    }
+
+    .cup {
+        background-color: #fff;
+        grid-area: cup;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+
+
+        img {
+            width: 30%;
+            object-fit: contain;
+            transform: rotate(30deg);
+        }
+
+        .para {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 30%;
+            h4 {
+                padding-top: 4rem;
+                color: black;
+                font-size: 3rem;
+            }
+
+            p {
+                padding-top: 1rem;
+                color: black;
+                font-size: 1.3rem;
+
+            }
+        }
+    }
+
+    .headphone {
+        background-color: #fff;
+        grid-area: headphone;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 1rem;
+
+
+
+        img {
+            width: 60%;
+            object-fit: contain;
+
+        }
+
+        .para {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            h4 {
+                padding-top: 3rem;
+                color: black;
+                font-size: 2.2rem;
+            }
+
+            p {
+                padding-top: 1rem;
+                color: black;
+                font-size: 1.2rem;
+
+            }
+        }
+    }
+
+    .purse {
+        background-color: #fff;
+        grid-area: purse;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+
+
+
+
+        img {
+            width: 50%;
+            object-fit: contain;
+
+        }
+
+        .para {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 30%;
+            h4 {
+                padding-top: 4rem;
+                color: black;
+                font-size: 2.2rem;
+            }
+
+            p {
+                padding-top: 1rem;
+                color: black;
+                font-size: 1.2rem;
+
+            }
+        }
+    }
+
+    .shoes {
+        background-color: #fff;
+        grid-area: shoes;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+
+
+
+
+        img {
+            width: 50%;
+            object-fit: contain;
+
+        }
+
+        .para {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 30%;
+            h4 {
+                padding-top: 4rem;
+                color: black;
+                font-size: 3rem;
+            }
+
+            p {
+                padding-top: 1rem;
+                color: black;
+                font-size: 1.3rem;
+
+            }
+        }
+    }
+
+    .school-bag {
+        background-color: #fff;
+        grid-area: school-bag;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 1rem;
+        
+        
+        img {
+
+            object-fit: contain;
+
+        }
+
+        .para {
+            display: flex;
+            flex-direction: column;
+
+            width: 60%;
+
+            h4 {
+                padding-top: 4rem;
+                color: black;
+                font-size: 2.5rem;
+            }
+
+            p {
+                padding-top: 1rem;
+                color: black;
+                font-size: 1.2rem;
+
+            }
+        }
+    }
+}
