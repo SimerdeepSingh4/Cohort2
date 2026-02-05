@@ -21,12 +21,48 @@ html {
   gap: 1rem;
   padding-block: 1rem;
   padding-inline: 3rem;
+  flex-wrap: wrap;
 }
 .note{
   background-color: #494949;
+  text-align: center;
   padding: 1rem;
   border-radius: 0.7rem;
   max-width: 20rem;
   color: rgb(212, 212, 207);
 
+}
+
+.btns{
+  display: flex;
+  gap: 1rem;
+  padding: 0.7rem;
+  justify-content:center;
+}
+
+.note-create-form{
+  display: flex;
+  gap: 1rem;
+  padding-inline: 3rem;
+  padding-block: 1rem;
+}
+
+.del-btn{
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem 0.7rem;
+}
+.upd-btn{
+  background-color: cyan;
+  color: rgb(127, 111, 111);
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem 0.7rem;
+}
+
+.upd-btn:active,
+.del-btn:active{
+  transform: scale(0.9);
 }
