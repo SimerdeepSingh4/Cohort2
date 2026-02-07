@@ -1,3 +1,8 @@
-let arr = new Array(2).fill(new Array(2).fill(0));
-arr[0][0] = 5;
-console.log(arr);
+let a = 40
+let b = 100
+
+a = a + b; //40 + 100 = 140
+b = a - b; // 140 - 100 = 40
+a = a-b; // 140 - 40 = 100
+
+console.log(`a = ${a}, b = ${b}`);
