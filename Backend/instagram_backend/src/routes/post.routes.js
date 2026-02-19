@@ -11,7 +11,7 @@ postRouter.get('/', identifyUser, postController.getAllPostController)
 // postRouter.get('/:user', postController.getPostByUerIdController)
 postRouter.get('/details/:postId', identifyUser, postController.getPostDetails)
 
-
+postRouter.post('/like/:postId', identifyUser, postController.likePostController)
 
 
 module.exports = postRouter
