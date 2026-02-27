@@ -49,8 +49,16 @@ async function getPostController(req, res) {
 
 }
 async function getAllPostController(req, res) {
-    const posts = await postModel.find()
-
+    const user = req.user
+    const posts = await Promise.all((await postModel.find().populate("user").lean())
+        .map(async (post) => {
+            const isLiked = await likeModel.findOne({
+                user: user.username,
+                post: post._id
+            })
+            post.isLiked = Boolean(isLiked)
+            return post
+        }))
 
     res.status(200).json({
         message: "All posts fetched successfully",
@@ -73,56 +81,56 @@ async function getPostByUerIdController(req, res) {
     })
 }
 
-async function getPostDetails(req,res){
+async function getPostDetails(req, res) {
 
     const userId = req.user.id
-    const {postId} = req.params
+    const { postId } = req.params
 
     const post = await postModel.findById(postId)
 
-    if(!post){
+    if (!post) {
         return res.status(404).json({
-            message:"Post not found"
+            message: "Post not found"
         })
     }
 
     const isValidUser = post.user.toString() === userId
 
-    if(!isValidUser){
+    if (!isValidUser) {
         return res.status(403).json({
-            message:"You are not authorized to view this post"
+            message: "You are not authorized to view this post"
         })
     }
 
     res.status(200).json({
-        message:"Post fetched successfully",
+        message: "Post fetched successfully",
         post
     })
 }
 
 
-async function likePostController(req,res){
+async function likePostController(req, res) {
     const username = req.user.username
     const postId = req.params.postId
 
     const post = await postModel.findById(postId)
 
-    if(!post){
+    if (!post) {
         return res.status(404).json({
-            message:"post not found."
+            message: "post not found."
         })
     }
 
     const like = await likeModel.create({
-        user:username,
-        post:postId
+        user: username,
+        post: postId
     })
 
     res.status(201).json({
-        message:"Post liked successfully",
+        message: "Post liked successfully",
         like
     })
-} 
+}
 
 
 

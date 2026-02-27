@@ -16,7 +16,7 @@ async function registerController(req, res) {
 
     if (isUserAlreadyExists) {
         return res.status(409).json({
-            message: "User already exists" + (isUserAlreadyExists.email === email ? "with this email" : "with this username")
+            message: "User already exists" + (isUserAlreadyExists.email === email ? " with this email" : "with this username")
         })
     }
 
@@ -57,7 +57,7 @@ async function loginController(req, res) {
             { username: username },
             { email: email }
         ]
-    })
+    }).select("+password")
     if (!user) {
         return res.status(404).json({
             message: "User not found"
@@ -68,7 +68,7 @@ async function loginController(req, res) {
 
     if (!isPasswordValid) {
         return res.status(401).json({
-            message: "Inavlid credentials"
+            message: "Invalid credentials"
         })
     }
 
