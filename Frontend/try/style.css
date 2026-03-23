@@ -1,43 +1,80 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow: hidden;
+
 }
-html,
+
 body {
-    width: 100%;
-    height: 100%;
-}
-body{
-    background-color: #111;
-    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
+    background: #6d1b1b;
 }
 
-form{
+.container {
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1000px;
+    height: 770px;
+    /* set a fixed height for smooth looping */
+}
+
+.column {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+
+.column img {
+    width: 100%;
+    height: 500px;
+    /* ✅ fixed height for sync */
+    border-radius: 12px;
+    object-fit: cover;
+    /* ensures image fills area without stretching */
+    display: block;
+
+}
+
+/* Animation for scrolling up */
+.scroll-up {
+    animation: scrollUp 15s linear infinite;
+}
+
+/* Animation for scrolling down */
+.scroll-down {
+    animation: scrollDown 13s linear infinite;
+}
+
+@keyframes scrollUp {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes scrollDown {
+    0% {
+        transform: translateY(-50%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* To make it infinite, duplicate content */
+.inner {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+    gap: 30px;
 }
-
-input{
-    border: none;
-    outline: none;
-    width: 400px;
-    height: 30px;
-    font-size: 25px;
-    
-}
-#password_input{
-    position: relative;
-}
-i{
-    position: absolute;
-    top: 350px;
-    left: 850px;
-    color: red;
-}
-

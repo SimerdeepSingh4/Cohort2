@@ -3,22 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link
-  href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
-  rel="stylesheet"
-/>
+  <title>3 Column Photo Animation</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <form>
-    <input type="text" name="name" id="name" placeholder="Enter name">
-    <input type="password" name="password" id="password_input" placeholder="Enter password" >
-    <i class="ri-eye-line" id="show-pass"></i>
-    <!-- <i class="ri-eye-off-line" id="hide-pass"></i> -->
+  <div class="container">
+    <!-- Column 1 (Upward) -->
+    <div class="column">
+      <div class="inner scroll-up">
+        <!-- original images -->
+        <img src="https://ik.imagekit.io/dhyh95euj/movie%20posters/PC1.jpg">
+        <img src="https://ik.imagekit.io/dhyh95euj/movie%20posters/PC19.jpg">
+        <img src="https://ik.imagekit.io/dhyh95euj/movie%20posters/PC9.jpg">
+        <img src="https://ik.imagekit.io/dhyh95euj/movie%20posters/PC18.jpg">
+        <img src="https://ik.imagekit.io/dhyh95euj/movie%20posters/PC4.jpg">
+        <img src="https://ik.imagekit.io/dhyh95euj/movie%20posters/PC11.jpg">
+        <!-- duplicate images for seamless loop -->
+        <img src="https://ik.imagekit.io/dhyh95euj/movie%20posters/PC1.jpg">
+        <img src="https://ik.imagekit.io/dhyh95euj/movie%20posters/PC19.jpg">
+        <img src="https://ik.imagekit.io/dhyh95euj/movie%20posters/PC9.jpg">
+        <img src="https://ik.imagekit.io/dhyh95euj/movie%20posters/PC18.jpg">
+        <img src="https://ik.imagekit.io/dhyh95euj/movie%20posters/PC4.jpg">
+        <img src="https://ik.imagekit.io/dhyh95euj/movie%20posters/PC11.jpg">
+      </div>
+    </div>
 
-    <button type="submit">Submit</button>
-  </form>
-  <script src="script.js"></script>
+    <!-- Column 2 (Downward) -->
+    <div class="column">
+      <div class="inner scroll-down">
+        <!-- original images -->
+        <img src="https://ik.imagekit.io/dhyh95euj/movie%20posters/PC14.jpg">
+        <img src="https://ik.imagekit.io/dhyh95euj/movie%20posters/PC7.jpg">
+        <img src="https://ik.imagekit.io/dhyh95euj/movie%20posters/PC11.jpg">
+        <img src="https://ik.imagekit.io/dhyh95euj/movie%20posters/PC28.jpg">
+        <img src="https://ik.imagekit.io/dhyh95euj/movie%20posters/PC13.jpg">
+        <img src="https://ik.imagekit.io/dhyh95euj/movie%20posters/PC23.jpg">
+        <!-- duplicate images -->
+        <img src="https://ik.imagekit.io/dhyh95euj/movie%20posters/PC14.jpg">
+        <img src="https://ik.imagekit.io/dhyh95euj/movie%20posters/PC7.jpg">
+        <img src="https://ik.imagekit.io/dhyh95euj/movie%20posters/PC11.jpg">
+        <img src="https://ik.imagekit.io/dhyh95euj/movie%20posters/PC28.jpg">
+        <img src="https://ik.imagekit.io/dhyh95euj/movie%20posters/PC13.jpg">
+        <img src="https://ik.imagekit.io/dhyh95euj/movie%20posters/PC23.jpg">
+      </div>
+    </div>
+
+    <!-- Column 3 (Upward, same as Column 1) -->
+    <div class="column">
+      <div class="inner scroll-up">
+        <!-- original images -->
+        <img src="https://ik.imagekit.io/dhyh95euj/movie%20posters/PC18.jpg">
+        <img src="https://ik.imagekit.io/dhyh95euj/movie%20posters/PC3.jpg">
+        <img src="https://ik.imagekit.io/dhyh95euj/movie%20posters/PC11.jpg">
+        <img src="https://ik.imagekit.io/dhyh95euj/movie%20posters/PC22.jpg">
+        <img src="https://ik.imagekit.io/dhyh95euj/movie%20posters/PC1.jpg">
+        <img src="https://ik.imagekit.io/dhyh95euj/movie%20posters/PC17.jpg">
+        <!-- duplicate images -->
+        <img src="https://ik.imagekit.io/dhyh95euj/movie%20posters/PC18.jpg">
+        <img src="https://ik.imagekit.io/dhyh95euj/movie%20posters/PC3.jpg">
+        <img src="https://ik.imagekit.io/dhyh95euj/movie%20posters/PC11.jpg">
+        <img src="https://ik.imagekit.io/dhyh95euj/movie%20posters/PC22.jpg">
+        <img src="https://ik.imagekit.io/dhyh95euj/movie%20posters/PC1.jpg">
+        <img src="https://ik.imagekit.io/dhyh95euj/movie%20posters/PC17.jpg">
+      </div>
+    </div>
+</div>
 </body>
 </html>
