@@ -1,0 +1,11 @@
+.nav{
+    position: absolute;
+    top: 30px;
+}
+
+.nav-content{
+    display: flex;
+    justify-content: space-between;
+    gap: 130px;
+    align-items: center
+}
